@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contributor"
+            type="com.qingshangzuo.mvvm.viewmodel.Contributor" />
+    </data>
+
+    <LinearLayout
+        android:fitsSystemWindows="true"
+        android:id="@+id/container"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/get"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:onClick="get"
+            android:text="get" />
+
+        <Button
+            android:id="@+id/change"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:onClick="change"
+            android:text="change" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/top_contributor"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:text="@{contributor.login}"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+</layout>
